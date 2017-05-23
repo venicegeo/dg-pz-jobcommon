@@ -20,10 +20,13 @@
 			<url>http://download.osgeo.org/webdav/geotools/</url>
 		</repository>
 <!-- The repositories below are commented out -->
-		<!--		<repository>
-			 <id>coastline-s3-nexus-replacement</id>
+		<repository>
+			<id>coastline-s3-nexus-replacement</id>
 			<url>s3://coastline-s3-nexus-replacement/content/repositories/</url> 
-		</repository> -->
+		        <releases>
+		            <enabled>true</enabled>
+		        </releases>
+		</repository> 
 	</repositories>
 
 	<dependencies>
@@ -214,11 +217,16 @@
 	</dependencies>
 	<build>
 		<extensions>
-			      <extension>
-			              <groupId>org.kuali.maven.wagons</groupId>
-			              <artifactId>maven-s3-wagon</artifactId>
-			              <version>1.2.1</version>
-		            </extension>
+			<extension>
+				<groupId>org.kuali.maven.wagons</groupId>
+		                <artifactId>maven-s3-wagon</artifactId>
+		                <version>1.2.1</version>
+		      </extension>
+		      <extension>
+			      <groupId>org.springframework.build</groupId>
+			      <artifactId>aws-maven</artifactId>
+			      <version>5.0.0.RELEASE</version>
+		             </extension>
 		    </extensions>
        </build>
 
@@ -253,4 +261,13 @@
 			</dependencies>
 		</profile>
 	</profiles>
+
+	<distributionManagement>
+	        <repository>
+		        <id>Component1-s3-release-repo</id>
+		        <name>Release Repository for Component1</name>
+			<url>s3://coastline-s3-nexus-replacement/content/repositories/</url> 
+
+		</repository>
+	</distributionManagement>
 </project>
