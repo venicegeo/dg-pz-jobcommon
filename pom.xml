@@ -16,8 +16,8 @@
 	
 	<repositories>
 		<repository>
-			<id>nexus</id>
-			<url>https://nexus.devops.geointservices.io/content/repositories/Piazza-Group/</url>
+			<id>s3</id>
+			<url>s3://coastline-s3-nexus-replacement/content/repositories/</url>
 		</repository>
 	</repositories>
 
@@ -207,6 +207,15 @@
 		</dependency>
 
 	</dependencies>
+	<build>
+		<extensions>
+			      <extension>
+			              <groupId>org.kuali.maven.wagons</groupId>
+			              <artifactId>maven-s3-wagon</artifactId>
+			              <version>1.2.1</version>
+		            </extension>
+		    </extensions>
+       </build>
 
 	<profiles>
 		<profile>
