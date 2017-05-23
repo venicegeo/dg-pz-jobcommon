@@ -20,10 +20,6 @@
 			<url>http://download.osgeo.org/webdav/geotools/</url>
 		</repository>
 <!-- The repositories below are commented out -->
-<!--		<repository>
-			<id>nexus</id>
-			<url>https://nexus.devops.geointservices.io/content/repositories/Piazza-Group/</url>
-		</repository> -->
 		<!--		<repository>
 			 <id>coastline-s3-nexus-replacement</id>
 			<url>s3://coastline-s3-nexus-replacement/content/repositories/</url> 
