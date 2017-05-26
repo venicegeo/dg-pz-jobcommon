@@ -39,6 +39,8 @@ public class UserProfile implements Serializable {
 
 	private String username;
 
+	private String credential;
+
 	private String distinguishedName;
 
 	@JsonIgnore
@@ -66,6 +68,10 @@ public class UserProfile implements Serializable {
 	public void setUsername(final String username) {
 		this.username = username;
 	}
+
+	public String getCredential() { return credential; }
+
+	public void setCredential(final String credential) { this.credential = credential; }
 
 	@JsonIgnore
 	public DateTime getCreatedOn() {
