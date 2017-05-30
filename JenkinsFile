@@ -15,11 +15,11 @@ node {
   stage('Archive') {
     sh """
       ${mvn}/bin/mvn clean install -U -Dmaven.repo.local=${root}
-      cp ${root}/target/pz-jobcommon-LATEST.jar ${root}/-pz-jobcommon.jar
+      cp ${root}/target/pz-jobcommon-LATEST.jar ${root}/pz-jobcommon.jar
     """
   }
 
-  stage('Cleanup') {
-    deleteDir()
+  stage('CI Deploy') {
+    cfPush()
   }
 }
