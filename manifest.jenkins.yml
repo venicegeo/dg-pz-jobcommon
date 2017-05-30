@@ -12,6 +12,3 @@ applications:
     - pz-elasticsearch
     - pz-blobstore
     - pz-geoserver-efs
-#  env:
-#    SPRING_PROFILES_ACTIVE: cloud
-#    JBP_CONFIG_OPEN_JDK_JRE: '{ memory_calculator : { memory_sizes : { heap : 768m } } }'
