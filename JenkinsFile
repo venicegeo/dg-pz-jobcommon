@@ -19,7 +19,4 @@ node {
     """
   }
 
-  stage('CI Deploy') {
-    cfPush()
-  }
 }
